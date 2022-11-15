@@ -1,21 +1,26 @@
 @import "nullstyle.scss";
-
+$width: 400px;
 body{
+    font-family: Arial;
     padding-top: 2%;
     padding-bottom: 2%;
-    padding-left: 35%;
-    padding-right: 35%;
     background-color:black;
     color: bisque;
+    text-align: center;
 }
+
+
 .window{
     position: relative;
     background-color: rgb(31, 31, 31);
     height: 100%;
+    width: $width;
+    display: inline-flex;
 
     .block_top{
-        position: relative;
-        height: 10%;
+        position: absolute;
+        height: 60px;
+        width: $width;
         background-color: rgb(66, 66, 66);
         padding-top: 2%;
         padding-bottom: 2%;
@@ -37,6 +42,7 @@ body{
                 height: 100%;
             }
         }
+    
     }
     .block_top::before{
         content: "";
@@ -47,16 +53,23 @@ body{
         background-size: auto 100%;
         left: 5%;
     }
+
     .block_middle {
+        position: absolute;
+        margin-top: 60px;
         width: 100%;
         height: 80%;
         overflow-y: auto;
-    }
+        text-align: left;
+        padding: 15px;
+        }
+    
+    
     .block_bottom {
-        position: fixed;
-        bottom: 4%;
-        width: 30%;
-        height: 10%;
+        position: absolute;
+        bottom: 0;
+        width: $width;
+        height: 60px;
         
     }
     .add_button {
@@ -73,6 +86,93 @@ body{
     .add_button:active{
         background-color: rgb(43, 43, 43);
     }
+    .cancel_button:hover{
+        background-color: rgb(175, 175, 175);
+    }
+    .cancel_button:active{
+        background-color: rgb(216, 216, 216);
+    }
 }
 
+.addbookForm{
+    position: fixed;
+    height: 92%;
+    width: $width;
+    z-index: 10;
+    background-color: rgb(31, 31, 31);
+    display: inline-flex;
 
+    .block_top{
+        position: absolute;
+        height: 60px;
+        width: $width;
+        background-color: rgb(66, 66, 66);
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        .cancel_button{
+            position: absolute;
+            height: 75%;
+            width: 20%;
+            right: 2%;
+            background-color: gray;
+            font-size: 20px;
+        }
+    }
+    
+    .block_top::before{
+        content: "";
+        position: absolute;
+        height: 80%;
+        width: 20%;
+        background: url('../img/e9c63fac9ba142f8d04fbf6da59148ea.png') no-repeat;
+        background-size: auto 100%;
+        left: 5%;
+    }
+    
+    .block_middle {
+        position: absolute;
+        margin-top: 60px;
+        width: 100%;
+        height: 80%;
+        overflow-y: auto;
+        text-align: left;
+        padding: 15px;
+        
+        .input_form {
+            margin-top: 15px;
+            .formFields{
+                height: 25px;
+                width: 100%;
+                font-size: 20px;
+            }
+        }
+    }
+    .block_bottom {
+        position: absolute;
+        bottom: 0;
+        width: $width;
+        height: 60px;
+        
+    }
+    .add_button {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: gray;
+        font-size: 30px;
+    }
+    .add_button:hover{
+        background-color: rgb(70, 70, 70);
+    }
+    .add_button:active{
+        background-color: rgb(43, 43, 43);
+    }
+    .cancel_button:hover{
+        background-color: rgb(175, 175, 175);
+    }
+    .cancel_button:active{
+        background-color: rgb(216, 216, 216);
+    }
+}
