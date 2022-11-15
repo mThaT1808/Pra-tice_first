@@ -1,6 +1,78 @@
-@import "nullstile.scss";
+@import "nullstyle.scss";
 
 body{
-    background-color: black;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 35%;
+    padding-right: 35%;
+    background-color:black;
     color: bisque;
 }
+.window{
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    height: 100%;
+
+    .block_top{
+        position: relative;
+        height: 10%;
+        background-color: rgb(66, 66, 66);
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+
+
+        .search_box{
+            position: relative;
+            margin-left: 20%;
+            height: 100%;
+            width: 78%;
+            border: 0px;
+            border-radius: 20px;
+            overflow: hidden;
+            
+            .search{
+                font-size: 20px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .block_top::before{
+        content: "";
+        position: absolute;
+        height: 80%;
+        width: 20%;
+        background: url('../img/e9c63fac9ba142f8d04fbf6da59148ea.png') no-repeat;
+        background-size: auto 100%;
+        left: 5%;
+    }
+    .block_middle {
+        width: 100%;
+        height: 80%;
+        overflow-y: auto;
+    }
+    .block_bottom {
+        position: fixed;
+        bottom: 4%;
+        width: 30%;
+        height: 10%;
+        
+    }
+    .add_button {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: gray;
+        font-size: 30px;
+    }
+    .add_button:hover{
+        background-color: rgb(70, 70, 70);
+    }
+    .add_button:active{
+        background-color: rgb(43, 43, 43);
+    }
+}
+
+
