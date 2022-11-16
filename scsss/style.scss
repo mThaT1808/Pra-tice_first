@@ -37,7 +37,7 @@ body{
             overflow: hidden;
             
             .search{
-                font-size: 20px;
+                font-size: 15px;
                 width: 100%;
                 height: 100%;
             }
@@ -62,7 +62,35 @@ body{
         overflow-y: auto;
         text-align: left;
         padding: 15px;
+
+        .entry{
+            position: relative;
+            height: 50px;
+            background-color: rgb(63, 63, 63);
+            margin-bottom: 10px;
+
+            .formCheckBox{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            .del{
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                bottom: 5px;
+                right: 5px;
+                background: url(../img/x.png) no-repeat;
+                background-size: auto 100%;
+            }
+            .del:hover{
+                box-shadow: 0px 0px 5px red;
+            }
+            .delbutton{
+                opacity:0;
+            }
         }
+    }
     
     
     .block_bottom {
@@ -95,12 +123,12 @@ body{
 }
 
 .addbookForm{
-    position: fixed;
-    height: 92%;
+    position: relative;
+    height: 100%;
     width: $width;
     z-index: 10;
     background-color: rgb(31, 31, 31);
-    display: inline-flex;
+    display: none;
 
     .block_top{
         position: absolute;
@@ -162,12 +190,6 @@ body{
         z-index: 0;
         background-color: gray;
         font-size: 30px;
-    }
-    .add_button:hover{
-        background-color: rgb(70, 70, 70);
-    }
-    .add_button:active{
-        background-color: rgb(43, 43, 43);
     }
     .cancel_button:hover{
         background-color: rgb(175, 175, 175);
